@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: aquamarine;
+}
+
+#logo{
+    width: 10%;
+}
+#name {
+    width: 90%;
+    margin-left: 0;
+    padding-left: 0;
+    float: left;
+}
+.navbar{
+    color: white;
+    background-color:#1f2121;
+}
+
+#vendor {
+    font-weight: bold;
+    color: black;
+    flex-direction: flex;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+#wrapper {
+    width: 1340px;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+}
+
+#stats {
+    height: 250px;
+    width: 100%;
+    border: black 2px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    padding: 40px;
+
+}
+.payment {
+    height: 200px;
+    width: 30%;
+    
+}
+
+#withdraw {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#withdraw button {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #15e715;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
+
+}
+
+#rep-wrapper {
+    width: 1340px;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+
+}
+
+
+
+#feedback-wrapper {
+    height: 150px;
+    width: 100%;
+    border: black 2px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    padding: 20px;
+
+
+}
+.rep{
+    height: 150px;
+    width: 30%;
+}
+
+.input {
+    max-width: auto;
+    width: 70px;
+    border:none;
+    border-radius: 10px;
+    color: green;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: azure;
+}
+
+.input-neg {
+    color: red;
+}
+
+.input:focus {
+    outline: none;
+
+}
+
+.btn {
+    width: 100px;
+    border-radius: 5px ;
+    padding: 10px;
+    color: blue;
+}
+
+#header {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    flex-direction: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+.active-jobs {
+    background-color: aquamarine;
+    height: auto;
+    width: 100%;
+
+}
+
+ 
+
+.jobs {
+    display: flex;
+    flex-direction: row;
+    border: black 2px;
+}
+
+#card-header {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    flex-direction: flex;
+    align-items: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-top: 30px;
+}
+
+.cards {
+    width: 93vw;
+    height: 200px;
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+}
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;  
+    color: #fff;  
+}
+
+.footer {
+    width: 400px;
+}
+ .social-links a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styling for the checkout */
+
+#card {
+    width: 500px;
+    height: 600px;
+    background-color: azure;
+    margin: auto ;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#card input {
+    border-radius: 5px;
+}
+
+
+#card button {
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+/*login styles */
+
