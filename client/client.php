@@ -156,9 +156,9 @@
                         <input type="number" name="cost" class="input1" id="cost" required>
                         <br>
                         <br>
-                        <label>Time</label>
+                        <label>Tel</label>
                         <br>
-                        <input type="time" name="time" class="input1" id="time" required>
+                        <input type="tel" name="tel" class="input1" id="tel" required>
                         <br>
                         <br>
                         <div class="submit1">
@@ -188,6 +188,7 @@
                         <th>Duration</th>
                         <th>Location</th>
                         <th>cost</th>
+                        <th>Tel</th>
                         <th>Update</th>
                         <th>Delete</th>
                         <th>status</th>
@@ -208,11 +209,12 @@
                         <td><?php echo $q['duration'];?></td>
                         <td><?php echo $q['location'];?></td>
                         <td><?php echo $q['cost'];?></td>
+                        <td><?php echo $q['tel'];?></td>
                         <td>
                         <div id="update">
-                                <form action="delete.php" method="POST">
+                                <form action="update.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $q['id']?>">
-                                    <input type="submit" name="delete" id="bt2" class="btn btn-danger"  value="update"></input>
+                                    <input type="submit" name="update" id="bt2" class="btn"  value="update"></input>
                                 </form>
     
                         </div>
@@ -227,9 +229,9 @@
                         </div>
                         </td>
                         <td> <div id="status">
-                                <form action="delete.php" method="POST">
+                                <form action="update1.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $q['id']?>">
-                                    <input type="submit" name="delete" id="bt2" class="btn btn-danger"  value="status"></input>
+                                    <input type="submit" name="update" id="bt2" class="btn btn-danger"  value="status"></input>
                                 </form>
     
                             </div>

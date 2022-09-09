@@ -3,7 +3,6 @@
     // include header.php file
     include ('header.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,36 +20,31 @@
     <link href="style1.css" rel="stylesheet" />
 </head>
 
-    <div id="vendor">
-        <h1>Vendor Dashboard</h1>
-    </div>
-
-    <header class="bg-light" id="wrapper" >
+<header class="bg-light" id="wrapper" >
         <div id="stats">
             <div class="payment">
                 <h4>Statistics</h4>
-                <label>Number of jobs taken:</label>
+                <label>Number of Tasks provided:</label>
                 <input type="text" class="input">
                 <br>
                 <br>
-                <label>Number of jobs completed:</label>
+                <label>Completed Tasks:</label>
                 <input type="text" class="input">
                 <br>
                 <br>
-                <label>Number of jobs cancelled:</label>
+                <label>Cancelled Tasks:</label>
                 <input type="text" class="input input-neg">
                 <br>
                 <br>
-                <label>Overrall finish time:</label>
-                <input type="text" class="input">
+               
             </div>
             <div class="payment">
                 <h4> net amount</h4>
-                <label>Total Received</label>
+                <label>Total Paid</label>
                 <input type="text" class="input">
                 <br>
                 <br>
-                <label>pending Payments:</label>
+                <label>Cancelled payments:</label>
                 <input type="text" class="input">
                 <br>
                 <br>
@@ -69,15 +63,15 @@
             </div>
             <div class="payment">
                 <h4> Available</h4>
-                <label>Available amount:</label>
+                <label>Current Balance:</label>
                 <input type="text" class="input">
                 <br>
                 <br>
-                <label>Withdrawals:</label>
+                <label>Total amount Deposited:</label>
                 <input type="text" class="input">
                 <br>
                 <br>
-                <label>Total payments:</label>
+                <label>Total payments made:</label>
                 <input type="text" class="input">
                 <br>
                 <br>
@@ -87,18 +81,18 @@
         
 
          </div>
-         <div id="withdraw">
+         <div id="Deposit">
 
-            <button> <a href="check out.html"></a>Withdraw</button>
+            <button> Withdraw</button>
 
         </div>
     </div>
         
     <div id="rep-wrapper">
-        <h2 id="header"> Vendor reputation</h2>
+        <h2 id="header2"> Vendor reputation</h2>
         <div id="feedback-wrapper">
             <div class="rep">
-                <label>Number of jobs completed:</label>
+                <label>Number of Tasks</label>
                 <input type="text" class="input">
             </div> 
             <div class="rep">
@@ -113,31 +107,111 @@
                 <label>Negative feedback:</label>
                 <input type="text"  class="input input-neg">
                 <br>
-                <button class="btn"> view all</a></button>
+                <button class="btn"> View all</button>
             </div>
 
         </div>
             
     </header> 
-    <bod>
+    <body>
 
         <div class="active-jobs">
             <div >
-                <h2 id="card-header">Active Jobs</h2>
+                <h2 id="card-header">Post a Job</h2>
             </div>
             <div class="jobs">
-        
-                <div class="cards">
-                    <h2>content</h2>
-                    
-    
-                </div>
+                <div class="jobs_taken"></div>
+              
             </div>
+
+
+            <div class="table">
+
+
+                    <h2>Active Jobs</h2>
+                   
+
+                    <table>
+                    <tr>
+                        <th>Job title</th>
+                        <th>category</th>
+                        <th>Duration</th>
+                        <th>Location</th>
+                        <th>cost</th>
+                        <th>Tel</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                        <th>status</th>
+                    </tr>
+
+                    <?php
+                                $conn= mysqli_connect("localhost","root","","alex db");
+                                $sql="SELECT * FROM post WHERE state = '1'";
+                                $query=mysqli_query($conn,$sql);
+
+                                foreach($query as $q)
+                                {
+                                ?>
+            
+                    <tr>
+                        <td><?php echo $q['title'];?></td>
+                        <td><?php echo $q['category'];?></td>
+                        <td><?php echo $q['duration'];?></td>
+                        <td><?php echo $q['location'];?></td>
+                        <td><?php echo $q['cost'];?></td>
+                        <td><?php echo $q['tel'];?></td>
+                        <td>
+                        <div id="update">
+                                <form action="update.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $q['id']?>">
+                                    <input type="submit" name="update" id="bt2" class="btn"  value="update"></input>
+                                </form>
+    
+                        </div>
+                        </td>
+                        <td>
+                        <div id="delete">
+                                <form action="cancel.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $q['id']?>">
+                                    <input type="submit" name="cancel" id="bt2" class="btn btn-danger"  value="cancel"></input>
+                                </form>
+    
+                        </div>
+                        </td>
+                        <td> <div id="status">
+                                <form action="update1.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $q['id']?>">
+                                    <input type="submit" name="update" id="bt2" class="btn btn-danger"  value="status"></input>
+                                </form>
+    
+                            </div>
+                        </td>
+                        
+                    </tr>
+
+
+                    <?php
+                        }
+                        ?>
+                   
+                    </table>
+
+
+
+            </div>
+
+            <div class="active-jobs">
+                <div >
+                    <h2 id="card-header"> </h2>
+                </div>
+                
             
             
         </div>
-        <?php
-        // include footer.php file
-            include ('footer.php');
-        ?>
+
+<?php
+// include footer.php file
+include ('footer.php');
+?>
+
 </html>

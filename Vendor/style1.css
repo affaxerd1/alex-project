@@ -2,21 +2,18 @@
     box-sizing: border-box;
 }
 body{
-    background-color: aquamarine;
+    background-color: #fff;
     width: 100vw;
     overflow-x: hidden;
+    margin-top: 0;
 }
 
-#logo{
-    width: 10%;
-}
 #name {
     width: 90%;
     margin-left: 0;
     padding-left: 0;
     float: left;
 }
-
 
 #vendor {
     font-weight: bold;
@@ -31,7 +28,7 @@ body{
 
 }
 #wrapper {
-    width: 1340px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background-color: azure;
@@ -53,14 +50,14 @@ body{
     
 }
 
-#withdraw {
+#Deposit {
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-#withdraw button {
+#Deposit button {
     width: 300px;
     height: 40px;
     border-radius: 10px;
@@ -78,7 +75,7 @@ body{
 }
 
 #rep-wrapper {
-    width: 1340px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background-color: azure;
@@ -131,7 +128,7 @@ body{
     color: blue;
 }
 
-#header1 {
+#header2 {
     font-size: 30px;
     font-weight: bold;
     color: black;
@@ -153,7 +150,7 @@ body{
 
 .jobs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border: black 2px;
 }
 
@@ -170,7 +167,8 @@ body{
 
 .cards {
     width: 93vw;
-    height: 200px;
+    height: auto;
+    padding: 10px;
     background-color: #fff;
     margin-right: auto;
     margin-left: auto;
@@ -178,7 +176,37 @@ body{
     display: flex;
     margin-bottom: 10px;
     box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
 }
+
+.table {
+    background-color: #fff;
+    padding: 50px;
+    width: 95vw;
+    margin: 20px;
+    margin-right:;
+}
+.table table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+ 
+ .table td, th {
+    border: none;
+    text-align: left;
+    padding: 8px;
+    
+    text-align: center;
+  }
+  
+ .table tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
 footer {
     width: 100%;
     height: 200px;
@@ -186,47 +214,191 @@ footer {
     padding: 50px;
     display: flex;
     flex-direction: row;  
-    color: #fff;  
+    color: #fff; 
+    padding: 25px; 
 }
 
 .footer {
     width: 400px;
+    padding: 25px;
 }
  .social-links a{
     text-decoration: none;
     color: #fff;
 }
+.error {
+    background: #f2DEDE;
+    color: red;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+ }
 
-/* Styling for the checkout */
-
-#card {
-    width: 500px;
-    height: 600px;
-    background-color: azure;
-    margin: auto ;
+ .cards .input1{
+    max-width: auto;
+    width: 300px;
     border-radius: 10px;
+    color: black;
+    padding-left: 10px;
+    font-size: 20px;
+    background-color: azure;
+    margin-top: 10px;
+    padding: 5px;
+    
+ }
+ .cards .input2{
+     border: none;
+    max-width: auto;
+    width: 300px;
+    border-radius: 10px;
+    color: black;
+    padding-left: 10px;
+    font-size: 20px;
+    background-color: azure;
+    margin-top: 10px;
+    padding: 5px;
+    
+ }
+
+ .submit1 .submit{
+     padding: 10px;
+     width: 150px;
+    margin: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: #fff;
+    background: linear-gradient(to right, #4481eb, #04befe, #3f86ed);
+    margin-left: 37%;
+   
+}
+
+
+#big{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    align-items: center;
+   
+
+    
+}
+
+#big .divs{
+    
+    width: 40vw;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+#submit{
+    width: 100vw;
+    height: 10vh;
+    margin-top: 0px;
+    margin-right: 10vw;
+}
+
+.submit1{
+    display: flex;
+    flex-direction: row;
+}
+
+#submit #status {
+
+   float: right;
+   margin: 5px;
+   
+}
+
+#buttons {
+    display: flex;
+
+}
+
+/*
+#delete {
+    display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-#header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    
+   
 }
 
-#card input {
-    border-radius: 5px;
-}
+*/
 
+#delete #bt2 {
+   
+    background-color: red;
+    width: 100px;
+   padding: 5px;
+   cursor: pointer;
+   border-radius: 1rem;
+   border: none;
+   font-size: 1.1rem;
+   font-weight: bolder;
+   color: #fff;
+   margin-left: 15%;
+  
+    
+ }
 
-#card button {
-    margin-left: 45px;
-    margin-right: 45px;
-}
+ .submit1 .delete {
+    background-color: red;
+   font-size: 20px;
+   font-weight: bolder;
+   color: #fff;
+   text-decoration: none;
+   padding: 6px 10px;
+   border-radius: 10px;
+   height: 50px;
+   width: 100px;
+ }
+ .delete::focus {
+    background-color: red;
+   font-size: 20px;
+   font-weight: bolder;
+   color: #fff;
+   text-decoration: none;
+   padding: 6px 30px;
+   border-radius: 10px;
+ }
 
-/*login styles */
+ #update #bt2 {
+   
+    background-color: green;
+    width: 100px;
+   padding: 5px;
+   cursor: pointer;
+   border-radius: 1rem;
+   border: none;
+   font-size: 1.1rem;
+   font-weight: bolder;
+   color: #fff;
+   margin-left: 15%;
+  
+    
+ }
+ #status #bt2 {
+   
+    background-color: whitesmoke;
+    width: 100px;
+   padding: 5px;
+   cursor: pointer;
+   border-radius: 1rem;
+   border: none;
+   font-size: 1.1rem;
+   font-weight: bolder;
+   color: #fff;
+   margin-left: 15%;
+  
+    
+ }
 

@@ -12,7 +12,7 @@
         <div class="owl-carousel owl-theme">
         <?php
         $conn=mysqli_connect("localhost","root","","alex db");
-        $sql="SELECT * FROM post where category = 2";
+        $sql="SELECT * FROM post where category = 2 and state=0";
         $query=mysqli_query($conn, $sql);
         foreach($query as $q)
         {
@@ -26,8 +26,13 @@
                     <label><b>Location: </b> <?php echo $q['location'];?></label>
                     <label><b>Cost:   </b> <?php echo $q['cost'];?>$</label>
                     <label><b>Duration: </b> <?php echo $q['duration'] ;?> Hours</label>
-                    <label><>Time: </label>
-                    <div id="btn-div">  <button id="button" class="button color-second-bg" style="border-radius: 5px; color: #fff; padding:5px 5px; border:none; ">Take Job</button></div>
+                    <label><b>Tel:</b>  <?php echo $q['tel'] ;?> </label>
+                    <div id="btn-div"> 
+                        <form action="state.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $q['id']?>">
+                                <input type="submit" name="state" id="button" class="button color-second-bg" style="border-radius: 5px; color: #fff; padding:5px 5px; border:none; " value="Take job"></input>
+                        </form>
+                    </div>
         
                 </div>
             </div>
@@ -50,7 +55,7 @@
         <div class="owl-carousel owl-theme">
         <?php
         $conn=mysqli_connect("localhost","root","","alex db");
-        $sql="SELECT * FROM post where category = 1";
+        $sql="SELECT * FROM post where category = 1 AND state=0";
         $query=mysqli_query($conn, $sql);
         foreach($query as $q)
         {
@@ -64,8 +69,15 @@
                     <label><b>Location: </b> <?php echo $q['location'];?></label>
                     <label><b>Cost:   </b> <?php echo $q['cost'];?>$</label>
                     <label><b>Duration: </b> <?php echo $q['duration'] ;?> Hours</label>
-                    <label><>Time: </label>
-                    <div id="btn-div">  <button id="button" class="button color-second-bg" style="border-radius: 5px; color: #fff; padding:5px 5px; border:none; ">Take Job</button></div>
+                    <label><b>Tel:</b>  <?php echo $q['tel'] ;?></label>
+                    <div id="btn-div"> 
+                        <form action="state.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $q['id']?>">
+                                <input type="submit" name="state" id="button" class="button color-second-bg" style="border-radius: 5px; color: #fff; padding:5px 5px; border:none; " value="Take job"></input>
+                        </form>
+                        
+                
+                    </div>
         
                 </div>
             </div>
@@ -89,7 +101,7 @@
         <div class="owl-carousel owl-theme">
         <?php
         $conn=mysqli_connect("localhost","root","","alex db");
-        $sql="SELECT * FROM post where category = 3";
+        $sql="SELECT * FROM post where category = 3 AND state =0";
         $query=mysqli_query($conn, $sql);
         foreach($query as $q)
         {
@@ -103,8 +115,14 @@
                     <label><b>Location: </b> <?php echo $q['location'];?></label>
                     <label><b>Cost:   </b> <?php echo $q['cost'];?>$</label>
                     <label><b>Duration: </b> <?php echo $q['duration'] ;?> Hours</label>
-                    <label><>Time: </label>
-                    <div id="btn-div">  <button id="button" class="button color-second-bg" style="border-radius: 5px; color: #fff; padding:5px 5px; border:none; ">Take Job</button></div>
+                    <label><b>Tel:</b>  <?php echo $q['tel'] ;?> </label>
+                    <div id="btn-div"> 
+                        <form action="state.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $q['id']?>">
+                                <input type="hidden" name="input" value="1">
+                                <input type="submit" name="state" id="button" class="button color-second-bg" style="border-radius: 5px; color: #fff; padding:5px 5px; border:none; " value="Take job"></input>
+                        </form>   
+                   </div>
         
                 </div>
             </div>
